@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_IssueScrollToAsync2.Page1">
+
+    <Grid RowDefinitions="44,100,*">
+        <Button x:Name="btnNext" Grid.Row="0" Text="Next" TextColor="White" BackgroundColor="Blue" Clicked="btnNext_Clicked" />
+        <Editor x:Name="txtLog" Grid.Row="1" />
+        <ScrollView x:Name="svTestItem" Grid.Row="2" Orientation="Vertical">
+            <StackLayout x:Name="slTestItem" Orientation="Vertical">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HeightRequest="44">
+                            <Label Text="{Binding ItemName}" FontSize="20"  />
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
