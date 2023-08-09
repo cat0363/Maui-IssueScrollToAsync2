@@ -22,7 +22,7 @@ public partial class Page1 : ContentPage
         base.OnNavigatedTo(args);
 
         txtLog.Text += ("Before ScrollToAsync" + Environment.NewLine);
-        await svTestItem.ScrollToAsync(0, 0, false);
+        await svTestItem.ScrollToAsync(0, 200, false);
         txtLog.Text += ("After ScrollToAsync" + Environment.NewLine);
     }
 
@@ -32,7 +32,7 @@ public partial class Page1 : ContentPage
         base.OnAppearing();
 
         txtLog.Text += ("Before ScrollToAsync" + Environment.NewLine);
-        await svTestItem.ScrollToAsync(0, 0, false);
+        await svTestItem.ScrollToAsync(0, 200, false);
         txtLog.Text += ("After ScrollToAsync" + Environment.NewLine);
     }
     */
