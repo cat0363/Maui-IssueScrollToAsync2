@@ -26,6 +26,17 @@ public partial class Page1 : ContentPage
         txtLog.Text += ("After ScrollToAsync" + Environment.NewLine);
     }
 
+    /*
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+
+        txtLog.Text += ("Before ScrollToAsync" + Environment.NewLine);
+        await svTestItem.ScrollToAsync(0, 0, false);
+        txtLog.Text += ("After ScrollToAsync" + Environment.NewLine);
+    }
+    */
+
     private async void btnNext_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.Navigation.PushAsync(new Page2(), false); 
